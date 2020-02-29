@@ -3,15 +3,24 @@
 
 using namespace std;
 
-class Object {
-    public:        
-        Object* describe(string description);
+class AbstractObject {
+    public:
+        // public methods
+        AbstractObject* describe(string description);
+        virtual string show() const;
 
-    private:
+        // destructor
+        ~AbstractObject();
+
+    protected:
+        // attributes
         int id;
         string owner;
         string description;
         list <string> tags;
-        Object* child;
-        friend std::ostream& operator<<(std::ostream&, const Object&);
+        AbstractObject* child;
+
+        // private methods
+        friend std::ostream& operator<<(std::ostream&, const AbstractObject&);
+
 };

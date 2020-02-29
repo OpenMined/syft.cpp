@@ -7,15 +7,23 @@
 
 using namespace std;
  
-Object* Object::describe(string description) {
+AbstractObject* AbstractObject::describe(string description) {
     this -> description = description;
     return this;
 }
 
-std::ostream& operator<<(std::ostream &strm, const Object &object) {
-        if (object.child){
-            return strm << "Object >" << object.child << ")";
+string AbstractObject::show() const {
+        if (this -> child){
+            AbstractObject* child_ptr = this -> child;
+            AbstractObject child = *child_ptr;
+            string child_repr = child.show();
+
+            return "Object > " + child_repr;
         } else {
-            return strm << "Object";
+            return "Object";
         }
+}
+
+std::ostream& operator<<(std::ostream &strm, const AbstractObject &object) {
+    return strm << object.show();
 }
