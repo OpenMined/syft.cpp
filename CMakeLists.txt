@@ -31,7 +31,7 @@ add_subdirectory(lib/googletest)
 # Testing configurations
 set(BINARY ${CMAKE_PROJECT_NAME}_tst)
 
-file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false tst/*.cpp)
+file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false tests/*.cpp)
 
 set(SOURCES ${TEST_SOURCES})
 
