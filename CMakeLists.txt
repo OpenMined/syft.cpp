@@ -20,7 +20,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -Wextra -std=c89 -pedantic \
                    -Wold-style-definition")
 
 
-file(GLOB src ${SYFT_SRC_ROOT}/*.cpp)
+file(GLOB src ${SYFT_SRC_ROOT}/*/*.cpp)
 
 include_directories(${SYFT_INCLUDE_DIR})
 

@@ -22,7 +22,7 @@ fi
 # check if something was modified
 notcorrectlist=`git status | grep "modified"`
 
-n_total="$(ls {tests/*.cpp,src/*.cpp,src/include/*.h} -1 | wc -l)"
+n_total="$(ls {tests/*.cpp,src/*/*.cpp,src/include/*.h} -1 | wc -l)"
 
 if [[ -z $notcorrectlist ]]; then
   # if nothing changed ok
