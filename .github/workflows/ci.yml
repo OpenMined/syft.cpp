@@ -32,7 +32,7 @@ jobs:
 
     - name: Install gtest
       working-directory: ${{runner.workspace}}/lib
-      run: git clone git clone https://github.com/google/googletest/
+      run: git clone https://github.com/google/googletest/
       
     - name: Configure CMake
       # Use a bash shell so we can use the same syntax for environment variable
