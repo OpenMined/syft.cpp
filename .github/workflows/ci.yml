@@ -32,7 +32,7 @@ jobs:
 
     - name: Install gtest
       working-directory: ${{runner.workspace}}/lib
-      run: git clone https://github.com/google/googletest/
+      run: git clone https://github.com/google/googletest.git
       
     - name: Configure CMake
       # Use a bash shell so we can use the same syntax for environment variable
@@ -42,7 +42,9 @@ jobs:
       # Note the current convention is to use the -S and -B options here to specify source 
       # and build directories, but this is only available with CMake 3.13 and higher.  
       # The CMake binaries on the Github Actions machines are (as of this writing) 3.12
-      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      run: |
+        ls $GITHUB_WORKSPACE
+        cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
     
     - name: Lint
       shell: bash
