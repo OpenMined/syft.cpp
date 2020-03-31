@@ -16,12 +16,12 @@ class ObjectPointer
   // static ObjectPointer* create_pointer(AbstractObject* obj,
   //                                      AbstractObject location,
   //                                      int id_at_location, bool register,
-  //                                      int ptr_id, bool garbage_collect_data);
+  //                                      int ptr_id, bool
+  //                                      garbage_collect_data);
   string describe();
   int id;
   string owner;
 
-  
  protected:
   // attributes
   // AbstractObject* location;
