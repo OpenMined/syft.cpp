@@ -10,9 +10,6 @@ class AbstractObject
   AbstractObject* describe(string description);
   virtual string show() const;
 
-  // destructor
-  ~AbstractObject();
-
  protected:
   // attributes
   int id;

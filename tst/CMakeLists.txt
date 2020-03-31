@@ -1,0 +1,16 @@
+set(BINARY ${CMAKE_PROJECT_NAME}_tst)
+
+set(SYFT_SRC_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+set(SYFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
+
+include_directories(${SYFT_INCLUDE_DIR})
+
+file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
+
+set(SOURCES ${TEST_SOURCES})
+
+add_executable(${BINARY} ${TEST_SOURCES})
+
+add_test(NAME ${BINARY} COMMAND ${BINARY})
+
+target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
