@@ -28,12 +28,13 @@ jobs:
       # We'll use this as our working directory for all subsequent commands
       run: |
         cmake -E make_directory ${{runner.workspace}}/build
-        cmake -E make_directory ${{runner.workspace}}/lib
 
     - name: Install gtest
-      working-directory: ${{runner.workspace}}/lib
-      run: git clone https://github.com/google/googletest.git
-      
+      run: |
+        mkdir lib && cd lib
+        git clone https://github.com/google/googletest.git
+        ls $GITHUB_WORKSPACE
+              
     - name: Configure CMake
       # Use a bash shell so we can use the same syntax for environment variable
       # access regardless of the host operating system
