@@ -1,18 +1,19 @@
-#include <string>
 #include <list>
+#include <string>
 
 #include "object.h"
 
 using namespace std;
 
-class AbstractTensor : public AbstractObject{
-    public:        
-        // constructor
-        AbstractTensor();
+class AbstractTensor : public AbstractObject
+{
+ public:
+  // constructor
+  AbstractTensor();
 
-        // destructor
-        ~AbstractTensor();
+  // destructor
+  ~AbstractTensor();
 
-        // methods
-        virtual string show() const;
+  // methods
+  virtual string show() const;
 };
