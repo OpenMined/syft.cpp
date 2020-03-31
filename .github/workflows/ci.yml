@@ -15,30 +15,30 @@ jobs:
 
     - name: Install dependencies
       run: |
-          - sudo apt update
-          - sudo apt install -y build-essential cmake
-          - sudo apt install -y clang-format
-          - sudo apt install automake
-          - sudo apt install autoconf
-          - sudo apt install -y libtool
-          - sudo apt install libtool-bin
-          - sudo apt install -y pkg-config
-          - sudo apt install -y texinfo
-          - sudo apt install libsubunit-dev
+          sudo apt update
+          sudo apt install -y build-essential cmake
+          sudo apt install -y clang-format
+          sudo apt install automake
+          sudo apt install autoconf
+          sudo apt install -y libtool
+          sudo apt install libtool-bin
+          sudo apt install -y pkg-config
+          sudo apt install -y texinfo
+          sudo apt install libsubunit-dev
   
     - name: Before script
       run: |
-          - mkdir build
-          - automake --version
-          - autoconf --version
-          - libtool --version
-          - pkg-config --version
+          mkdir build
+          automake --version
+          autoconf --version
+          libtool --version
+          pkg-config --version
 
     - name: Lint
       run: bash ./check_code_format.sh
       
     - name: Build
       run: |
-          - cd build
-          - cmake ..
-          - make
+          cd build
+          cmake ..
+          make
