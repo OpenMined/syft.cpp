@@ -12,7 +12,13 @@ Then, do as follows to build this library:
 git clone https://github.com/hericlesme/syft.cpp.git
 cd syft.cpp
 ```
-2. Build the project using CMake:
+2. Clone the `googletest` library to the `/lib` folder
+```bash
+mkdir lib && cd lib
+git clone https://github.com/google/googletest
+```
+
+3. Build the project using CMake:
 
 ```bash
 mkdir build && cd build
