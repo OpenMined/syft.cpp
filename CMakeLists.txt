@@ -24,7 +24,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -Wextra -std=c89 -pedantic \
 include_directories(src)
 include_directories(${SYFT_INCLUDE_DIR})
 
-
+enable_testing()
 add_subdirectory(src)
 add_subdirectory(lib/googletest)
 
