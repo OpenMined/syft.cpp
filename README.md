@@ -49,3 +49,6 @@ If you wish to install the `syft` library run the following command with `sudo` 
 ```bash
 make install
 ```
+
+## License
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
