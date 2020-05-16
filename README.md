@@ -1,3 +1,7 @@
+# DEPRECATION NOTICE
+
+Warning, this repository will soon be deprecated.
+
 # syft.cpp
 A C++ implementation of [PySyft](https://github.com/OpenMined/PySyft/) - A library for encrypted, privacy preserving machine learning
 
